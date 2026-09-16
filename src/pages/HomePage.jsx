@@ -1,6 +1,6 @@
 import ProductCard from '../components/ProductCard.jsx';
 
-export default function HomePage({ featuredProducts, onSelectProduct, onGoToCatalog }) {
+export default function HomePage() {
   return (
     <section className="page-shell">
       <div className="hero">
