@@ -1,7 +1,13 @@
 import ProductCard from '../components/ProductCard.jsx';
 import CategoryFilter from '../components/CategoryFilter.jsx';
+import { products } from '../data/products.js';
+import { useSearchParams } from 'react-router-dom';
 
-export default function CatalogPage({ products, categories, activeCategory, onSelectCategory, onSelectProduct }) {
+export default function CatalogPage() {
+  const [searchParams] = useSearchParams()
+  const activeCategory =  searchParams.get("category") || ""
+
+
   const visibleProducts = activeCategory
     ? products.filter(p => p.category === activeCategory)
     : products;
