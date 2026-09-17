@@ -21,7 +21,7 @@ export default function CatalogPage() {
 
       <div className="product-grid">
         {visibleProducts.map(product => (
-          <ProductCard key={product.id} product={product} onSelect={onSelectProduct} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>
